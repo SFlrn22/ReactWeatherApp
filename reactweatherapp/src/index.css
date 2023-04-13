@@ -1,4 +1,6 @@
 body {
+  background-color: rgba(0, 0, 0, 0.4);
+  background: url(./Assets/bg.jpg) no-repeat center center/cover;
   font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

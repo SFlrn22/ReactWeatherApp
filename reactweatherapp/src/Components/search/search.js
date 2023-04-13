@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './search.css';
 import { AsyncPaginate } from 'react-select-async-paginate';
 import axios from 'axios';
+import './search.css';
 import { geoApiOptions, geoApi_link } from '../../api';
 
 const Search = ({ onSearchChange }) => {
@@ -28,7 +28,18 @@ const Search = ({ onSearchChange }) => {
       })
       .catch((err) => console.error(err));
   };
-
+  const customStyle = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: '25px',
+      backgroundColor: 'rgba(255,255,255,0.7)',
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? '#E9D6EB' : null,
+      color: state.isFocused ? '#306C88' : null,
+    }),
+  };
   return (
     <AsyncPaginate
       placeholder="Enter city name"
@@ -36,6 +47,7 @@ const Search = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      styles={customStyle}
     />
   );
 };
