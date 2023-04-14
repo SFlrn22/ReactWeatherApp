@@ -1,0 +1,9 @@
+.forecast-container{
+    padding-top: 4rem;
+    color: rgba(228, 227, 242, 0.774);
+    text-align: center;
+    display: grid;
+    grid-template: 300px / auto auto;
+    align-items: center;
+    column-gap: 5rem;
+}
