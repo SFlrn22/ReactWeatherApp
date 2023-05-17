@@ -4,11 +4,11 @@
     "es2021": true
   },
   "extends": [
+    "airbnb",
+    "airbnb/hooks",
     "react-app",
     "plugin:react/recommended",
-    "airbnb",
     "plugin:prettier/recommended",
-    "eslint:recommended",
     "plugin:react/jsx-runtime"
   ],
   "overrides": [],

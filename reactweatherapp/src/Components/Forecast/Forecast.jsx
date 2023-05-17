@@ -1,14 +1,14 @@
-import "./Forecast.css";
+import './Forecast.css';
 
 function Forecast({ data }) {
   const weekDays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
   ];
 
   const today = new Date().getDay();
@@ -29,7 +29,7 @@ function Forecast({ data }) {
             alt="weather-icon"
             className="weather-icon"
           />
-        </div>,
+        </div>
       );
     }
   });

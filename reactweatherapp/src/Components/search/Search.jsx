@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { AsyncPaginate } from "react-select-async-paginate";
-import axios from "axios";
-import "./search.css";
-import { geoApiOptions, geoApiLink } from "../../Api";
+import useState from 'react';
+import AsyncPaginate from 'react-select-async-paginate';
+import axios from 'axios';
+import './search.css';
+import { geoApiOptions, geoApiLink } from '../../Api';
 
 function Search({ onSearchChange }) {
   const [search, setSearch] = useState(null);
@@ -26,18 +26,18 @@ function Search({ onSearchChange }) {
   const customStyle = {
     control: (provided, state) => ({
       ...provided,
-      borderRadius: "25px",
-      backgroundColor: "rgba(255,255,255,0.7)",
-      border: state.menuIsOpen ? "2px solid pink !important" : null,
-      margin: "auto auto",
-      width: state.menuIsOpen ? "100%" : "35%",
-      boxShadow: state.isFocused ? "0 0 0 1px pink" : "0 0 0 0",
-      marginBottom: state.menuIsOpen ? "100px" : null,
+      borderRadius: '25px',
+      backgroundColor: 'rgba(255,255,255,0.7)',
+      border: state.menuIsOpen ? '2px solid pink !important' : null,
+      margin: 'auto auto',
+      width: state.menuIsOpen ? '100%' : '35%',
+      boxShadow: state.isFocused ? '0 0 0 1px pink' : '0 0 0 0',
+      marginBottom: state.menuIsOpen ? '100px' : null,
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? "#E9D6EB" : null,
-      color: state.isFocused ? "#306C88" : null,
+      backgroundColor: state.isFocused ? '#E9D6EB' : null,
+      color: state.isFocused ? '#306C88' : null,
     }),
   };
   return (

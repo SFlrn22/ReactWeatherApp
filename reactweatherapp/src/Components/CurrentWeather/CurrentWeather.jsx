@@ -1,4 +1,4 @@
-import "./current-weather.css";
+import './current-weather.css';
 
 function CurrentWeather({ data }) {
   return (
@@ -53,9 +53,9 @@ function CurrentWeather({ data }) {
         <div className="sunrise">
           <span className="title">Sunrise</span>
           <span>
-            {new Date(data.sys.sunrise * 1000).toLocaleString("en-US", {
-              hour: "numeric",
-              minute: "numeric",
+            {new Date(data.sys.sunrise * 1000).toLocaleString('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
               hour12: true,
             })}
           </span>
@@ -63,9 +63,9 @@ function CurrentWeather({ data }) {
         <div className="sunset">
           <span className="title">Sunset</span>
           <span>
-            {new Date(data.sys.sunset * 1000).toLocaleString("en-US", {
-              hour: "numeric",
-              minute: "numeric",
+            {new Date(data.sys.sunset * 1000).toLocaleString('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
               hour12: true,
             })}
           </span>
