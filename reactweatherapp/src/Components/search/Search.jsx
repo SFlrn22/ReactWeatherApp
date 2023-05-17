@@ -1,5 +1,5 @@
-import useState from 'react';
-import AsyncPaginate from 'react-select-async-paginate';
+import { useState } from 'react';
+import { AsyncPaginate } from 'react-select-async-paginate';
 import axios from 'axios';
 import './search.css';
 import { geoApiOptions, geoApiLink } from '../../Api';
