@@ -19,8 +19,8 @@ function Forecast({ data }) {
     if (date.getDay() !== today && date.getHours() === 12) {
       forecast.push(
         <div key={item.dt_txt}>
-          <h1>{weekDays[date.getDay()]}</h1>
-          <h1>
+          <h1 className="day">{weekDays[date.getDay()]}</h1>
+          <h1 className="temp">
             {Math.round(item.main.temp)}
             °C
           </h1>

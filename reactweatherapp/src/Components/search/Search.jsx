@@ -28,16 +28,33 @@ function Search({ onSearchChange }) {
       ...provided,
       borderRadius: '25px',
       backgroundColor: 'rgba(255,255,255,0.7)',
-      border: state.menuIsOpen ? '2px solid pink !important' : null,
+      border: state.menuIsOpen
+        ? '2px solid pink !important'
+        : '0.5px solid pink !important',
       margin: 'auto auto',
       width: state.menuIsOpen ? '100%' : '35%',
       boxShadow: state.isFocused ? '0 0 0 1px pink' : '0 0 0 0',
       marginBottom: state.menuIsOpen ? '100px' : null,
+      '@media (min-width: 768px) and (max-width: 1023px)': {
+        width: state.menuIsOpen ? '80%' : '50%',
+        marginBottom: state.menuIsOpen ? '70px' : null,
+      },
     }),
     option: (provided, state) => ({
       ...provided,
       backgroundColor: state.isFocused ? '#E9D6EB' : null,
       color: state.isFocused ? '#306C88' : null,
+      '@media (min-width: 768px) and (max-width: 1023px)': {
+        height: '20px',
+        fontSize: '10px',
+      },
+    }),
+    menu: (provided, state) => ({
+      ...provided,
+      '@media (min-width: 768px) and (max-width: 1023px)': {
+        width: '25rem',
+        transform: 'translateX(55%)',
+      },
     }),
   };
   return (
